@@ -1,0 +1,19 @@
+
+<html>
+	<head>
+		<title>The Gossip Project</title>
+	</head>
+
+	<body>
+		<h1> Mon super site de Boule, depuis le bon dossier views</h1>
+		
+			<% gossips.each do |gossipo| %>
+        <p>
+          <%= gossipo.author %><br/>
+          <%= gossipo.gossip %>
+        </p>
+      <% end %>
+  
+
+	</body>
+</html>
