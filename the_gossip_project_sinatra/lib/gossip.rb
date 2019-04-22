@@ -8,13 +8,14 @@ attr_accessor :author, :gossip
 		@gossip = update_gossip
 	end
 
-
+# Methode pour sauvegarder les inputs
 	def save
   CSV.open("./db/gossip.csv", "ab") do |csv|
     csv << ["#{@author}", "#{@gossip}"]
 		end
   	end
 
+# Methode pour afficher tous les Gossip
   	def self.all
   		all_gossips = []
   		CSV.read("./db/gossip.csv").each do |csv_line|
@@ -23,6 +24,7 @@ attr_accessor :author, :gossip
   		return all_gossips
   	end
 
+# Methode pour afficher un seul gossip (a terminer)
   	def self.find
   		array_1 = []
   		CSV.read("./db/gossip.csv").each do |line|

@@ -9,3 +9,6 @@ require 'gossip'
 
 
 run ApplicationController
+
+
+# CONFIG SERVER Rack Up
